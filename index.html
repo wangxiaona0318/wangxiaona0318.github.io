@@ -60,6 +60,141 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-git" class="post-git post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/12/14/git/">Git</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/git/" data-id="ciwp2eeds0001hcv1d9ip3cze" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install git //mac的安装 </div><div class="line">安装xcode，不用再安装git</div></pre></td></tr></table></figure>
+<h2 id="配置邮箱和用户名"><a href="#配置邮箱和用户名" class="headerlink" title="配置邮箱和用户名"></a>配置邮箱和用户名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//先查看配置</div><div class="line">git config --list</div><div class="line">//如果未配置name和邮箱</div><div class="line">git config --global user.name &apos;git用户名&apos;</div><div class="line">git config --global user.email &apos;git邮箱&apos;</div></pre></td></tr></table></figure>
+<h2 id="要把写好的文件推送到远程仓库（github仓库）上"><a href="#要把写好的文件推送到远程仓库（github仓库）上" class="headerlink" title="要把写好的文件推送到远程仓库（github仓库）上"></a>要把写好的文件推送到远程仓库（github仓库）上</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git init //.git文件存储着所有内容（提交，版本库，标签），初始化后会给一个分支默认叫master</div><div class="line">git remote add 别名 远程地址</div><div class="line">//git commit -a -m&apos;sliderdev&apos; 从工作区直接提交到历史区. 不支持首次提交，如果文件没有加到过缓存区中是不能使用这种方式的</div><div class="line">git add .</div><div class="line">git commit -m&apos;提交内容描述&apos;</div><div class="line">git push 别名 master</div></pre></td></tr></table></figure>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ul>
+<li>查看所有分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git branch </div><div class="line">git branch 分支名 :创建分支</div><div class="line">git checkout dev:切换分支</div><div class="line">git branch -D 分支名:删除分支</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>相当于把master复制了一份，提交到dev上master才看不到，相当于dev把100块钱放到自己家了，那master就无法看到了</p>
+<h3 id="创建分支并且切换分支"><a href="#创建分支并且切换分支" class="headerlink" title="创建分支并且切换分支"></a>创建分支并且切换分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git branch dev</div><div class="line">git checkout dev</div><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//要切换到master身上来合并dev</div><div class="line">git merge dev</div></pre></td></tr></table></figure>
+<h2 id="发布静态页面"><a href="#发布静态页面" class="headerlink" title="发布静态页面"></a>发布静态页面</h2><ul>
+<li>发布页面要求分支的名字必须叫做gh-pages(把内容推送到这个分支上)</li>
+<li>1.创建页面</li>
+<li>2.切换到gh-pages分支</li>
+<li>3.提交到分支上</li>
+<li>4.推送到远程仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin gh-pages</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="shell命令"><a href="#shell命令" class="headerlink" title="shell命令"></a>shell命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mkdir 文件夹的名字 //创建文件夹</div><div class="line">cd change directory //改变目录</div><div class="line">touch hello.js //创建文件</div><div class="line">cat hello.js //查看文件内容 如果文件不存在则会创建文件</div><div class="line">rm &apos;文件名&apos; //删除文件</div><div class="line">vi hello.js //编辑文件</div></pre></td></tr></table></figure>
+<h2 id="其他git命令"><a href="#其他git命令" class="headerlink" title="其他git命令"></a>其他git命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">git remote -v //查看所有的地址</div><div class="line">git remote rm 别名 //删除地址</div><div class="line"></div><div class="line">git status //查看状态</div><div class="line">git add . //增加暂存区</div><div class="line">git log // 查看历史库日志</div><div class="line">git diff //工作区和暂存区</div><div class="line">git diff 分支的名字（master） //工作区和历史区</div><div class="line">git diff --cached //暂存区和历史区</div><div class="line">git checkout 文件名 //用暂存覆盖掉工作区</div><div class="line">git reset --hard 版本号 //版本回滚 用历史区覆盖工作区</div><div class="line">git reflog //获取所有操作的版本号</div><div class="line"></div><div class="line">git reset HEAD 文件名 //撤回add的内容</div><div class="line">git log --author/--grep //搜索日志</div></pre></td></tr></table></figure>
+<h2 id="提交到他人的远程仓库的两种方法"><a href="#提交到他人的远程仓库的两种方法" class="headerlink" title="提交到他人的远程仓库的两种方法"></a>提交到他人的远程仓库的两种方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.他人的git对应的仓库-&gt;settings -&gt; collabrators -&gt; 添加 -&gt; 给我们发送邀请函 -&gt;我们同意即可。 我们可以直接操作他人的仓库</div><div class="line">2.打开自己的git,复制他人仓库浏览器地址，在自己git的浏览器中打开，fork，把他人仓库的内容复制到了自己的远程仓库中了。自己仓库改变后要想提交到他人的仓库只需new pull request即可</div></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/12/14/git/">
+    <time datetime="2016-12-14T14:59:20.480Z" class="entry-date">
+        2016-12-14
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-angular" class="post-angular post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/12/14/angular/">angular</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/angular/" data-id="ciwp2eedk0000hcv1yvrcjpl4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var app = angular.module(&apos;appModule&apos;,[]);</div><div class="line">app.controller(&apos;myCtrl&apos;,[&apos;$scope&apos;,function($scope)&#123;&#125;])</div></pre></td></tr></table></figure>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><ul>
+<li>ng-app:模块名</li>
+<li>ng-controller:控制器名</li>
+<li>ng-model:只能放在input标签上，实现双向绑定,不能放运算</li>
+<li>ng-bind:可以放运算，原有的内容会被ng-bind绑定的值替换掉</li>
+<li>ng-click:点击事件<blockquote>
+<p>ng-click = ‘v.count = v.count -1’;</p>
+</blockquote>
+</li>
+<li>ng-repeat:放在需要循环的标签上 .循环几次创建几个作用域<blockquote>
+<p>ng-repeat=’v in products track by $index’<br>ng-repeat=’(key,v) in products track by $index’</p>
+</blockquote>
+</li>
+<li>ng-disabled:是否可用<blockquote>
+<p>ng-disabled=’v.count&lt;=1?true:false’</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="生成作用域"><a href="#生成作用域" class="headerlink" title="生成作用域"></a>生成作用域</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">ng-app/ng-controller/ng-repeat/ng-transclude/ng-if/</div></pre></td></tr></table></figure>
+<h2 id="组件式指令和装饰性指令"><a href="#组件式指令和装饰性指令" class="headerlink" title="组件式指令和装饰性指令"></a>组件式指令和装饰性指令</h2><ul>
+<li>directive</li>
+<li>指令是否依赖于控制器：不依赖</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">app.directive(&apos;myDire&apos;,function()&#123;//需要转换成驼峰命名法，标签名为-连接</div><div class="line">          return &#123;</div><div class="line">              restrict:&apos;EAC&apos;,//</div><div class="line">              replace:true,</div><div class="line">              transclude,//保留标签上的文字，需要写在模板的哪个标签就在哪个标签上写ng-transclude,带有ng-transclude的标签会生成一个作用域</div><div class="line">              template:&apos;&lt;h1&gt;welcome&lt;/h1&gt;&apos;//模板中根节点保证只有一个，防止报错.</div><div class="line">              // templateUrl:&apos;./template.html&apos;,</div><div class="line">              link:function(element,scope,attr)&#123;//可以操作DOM的地方</div><div class="line">                           //scope:当前指令所在的作用域</div><div class="line">                          // elements:是一个jq对象。写在谁身上，指向的就是哪个元素</div><div class="line">                          //attrs：当前指令的所有属性变成一个对象格式</div><div class="line">              &#125;</div><div class="line">              //scope:&#123;title:&apos;=title&apos;,tail:&apos;@tail&apos;,submit:&apos;&amp;fn&apos;&#125;  = :表示可以双向绑定，@：表示获取的是获取一个字符串类型的值</div><div class="line">              //scope:true//&#123;&#125;.两种都可以，是有区别的???</div><div class="line">          &#125;</div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>拖拽</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">link:function(scope,element,attrs)&#123;</div><div class="line">                element.on(&apos;mousedown&apos;,function(e)&#123;</div><div class="line">                    var disX = e.pageX - this.offsetLeft;</div><div class="line">                    var disY = e.pageY - this.offsetTop;</div><div class="line">                    angular.element(document).on(&apos;mousemove&apos;,function(e)&#123;</div><div class="line">                        element.css(&#123;left:e.pageX - disX + &apos;px&apos;,top: e.pageY - disY + &apos;px&apos;&#125;);</div><div class="line">                    &#125;);</div><div class="line">                    e.preventDefault();</div><div class="line">                    angular.element(document).on(&apos;mouseup&apos;,function(e)&#123;</div><div class="line">                        angular.element(document).off();</div><div class="line">                    &#125;);</div><div class="line">                &#125;);</div><div class="line">            &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/12/14/angular/">
+    <time datetime="2016-12-14T14:59:16.905Z" class="entry-date">
+        2016-12-14
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-blog" class="post-blog post type-post status-publish format-standard hentry">
     <!---->
 
@@ -68,22 +203,23 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2016/12/14/blog/">Blog</a>
+      <a class="article-title" href="/2016/12/14/blog/">blog</a>
     </h1>
   
 
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/blog/" data-id="ciwodlhry0000xkv14viaiysn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/blog/" data-id="ciwodoze60001vsv1bapyfy4k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
         <h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init sleeping</div><div class="line">cd sleeping</div><div class="line">hexo serve</div></pre></td></tr></table></figure>
-<h2 id="发布到git上"><a href="#发布到git上" class="headerlink" title="发布到git上"></a>发布到git上</h2><p>-进入到sleeping文件里<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div><div class="line"></div><div class="line">deploy _config.yml文件:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: master</div><div class="line">  message: push</div><div class="line">  </div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<h2 id="发布到git上"><a href="#发布到git上" class="headerlink" title="发布到git上"></a>发布到git上</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div><div class="line"></div><div class="line">deploy _config.yml文件:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: master</div><div class="line">  message: push</div></pre></td></tr></table></figure>
 <h2 id="有更改后要重新生成页面发布"><a href="#有更改后要重新生成页面发布" class="headerlink" title="有更改后要重新生成页面发布"></a>有更改后要重新生成页面发布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+
       
     </div><!-- .entry-content -->
 
@@ -119,7 +255,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/hello-world/" data-id="ciwodlhs60001xkv19iwebbyz" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/hello-world/" data-id="ciwodozdx0000vsv1w3gaxoao" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -178,7 +314,15 @@
       <ul>
         
           <li>
-            <a href="/2016/12/14/blog/">Blog</a>
+            <a href="/2016/12/14/git/">Git</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/14/angular/">angular</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/14/blog/">blog</a>
           </li>
         
           <li>

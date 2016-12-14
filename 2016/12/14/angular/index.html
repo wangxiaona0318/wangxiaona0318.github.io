@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="创建模块12var app = angular.module(&amp;apos;appModule&amp;apos;,[]);app.controller(&amp;apos;myCtrl&amp;apos;,[&amp;apos;$scope&amp;apos;,function($scope)&amp;#123;&amp;#125;])
+模块
+ng-ap" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>angular | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="创建模块12var app = angular.module(&amp;apos;appModule&amp;apos;,[]);app.controller(&amp;apos;myCtrl&amp;apos;,[&amp;apos;$scope&amp;apos;,function($scope)&amp;#123;&amp;#125;])
+模块
+ng-app:模块名
+ng-controller:控制器名
+ng-model:只能放在input标签上，实现双">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular">
+<meta property="og:url" content="http://yoursite.com/2016/12/14/angular/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="创建模块12var app = angular.module(&amp;apos;appModule&amp;apos;,[]);app.controller(&amp;apos;myCtrl&amp;apos;,[&amp;apos;$scope&amp;apos;,function($scope)&amp;#123;&amp;#125;])
+模块
+ng-app:模块名
+ng-controller:控制器名
+ng-model:只能放在input标签上，实现双">
+<meta property="og:updated_time" content="2016-12-14T14:59:59.871Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular">
+<meta name="twitter:description" content="创建模块12var app = angular.module(&amp;apos;appModule&amp;apos;,[]);app.controller(&amp;apos;myCtrl&amp;apos;,[&amp;apos;$scope&amp;apos;,function($scope)&amp;#123;&amp;#125;])
+模块
+ng-app:模块名
+ng-controller:控制器名
+ng-model:只能放在input标签上，实现双">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-angular" class="post-angular post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      angular
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/angular/" data-id="ciwp2eedk0000hcv1yvrcjpl4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var app = angular.module(&apos;appModule&apos;,[]);</div><div class="line">app.controller(&apos;myCtrl&apos;,[&apos;$scope&apos;,function($scope)&#123;&#125;])</div></pre></td></tr></table></figure>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><ul>
+<li>ng-app:模块名</li>
+<li>ng-controller:控制器名</li>
+<li>ng-model:只能放在input标签上，实现双向绑定,不能放运算</li>
+<li>ng-bind:可以放运算，原有的内容会被ng-bind绑定的值替换掉</li>
+<li>ng-click:点击事件<blockquote>
+<p>ng-click = ‘v.count = v.count -1’;</p>
+</blockquote>
+</li>
+<li>ng-repeat:放在需要循环的标签上 .循环几次创建几个作用域<blockquote>
+<p>ng-repeat=’v in products track by $index’<br>ng-repeat=’(key,v) in products track by $index’</p>
+</blockquote>
+</li>
+<li>ng-disabled:是否可用<blockquote>
+<p>ng-disabled=’v.count&lt;=1?true:false’</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="生成作用域"><a href="#生成作用域" class="headerlink" title="生成作用域"></a>生成作用域</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">ng-app/ng-controller/ng-repeat/ng-transclude/ng-if/</div></pre></td></tr></table></figure>
+<h2 id="组件式指令和装饰性指令"><a href="#组件式指令和装饰性指令" class="headerlink" title="组件式指令和装饰性指令"></a>组件式指令和装饰性指令</h2><ul>
+<li>directive</li>
+<li>指令是否依赖于控制器：不依赖</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">app.directive(&apos;myDire&apos;,function()&#123;//需要转换成驼峰命名法，标签名为-连接</div><div class="line">          return &#123;</div><div class="line">              restrict:&apos;EAC&apos;,//</div><div class="line">              replace:true,</div><div class="line">              transclude,//保留标签上的文字，需要写在模板的哪个标签就在哪个标签上写ng-transclude,带有ng-transclude的标签会生成一个作用域</div><div class="line">              template:&apos;&lt;h1&gt;welcome&lt;/h1&gt;&apos;//模板中根节点保证只有一个，防止报错.</div><div class="line">              // templateUrl:&apos;./template.html&apos;,</div><div class="line">              link:function(element,scope,attr)&#123;//可以操作DOM的地方</div><div class="line">                           //scope:当前指令所在的作用域</div><div class="line">                          // elements:是一个jq对象。写在谁身上，指向的就是哪个元素</div><div class="line">                          //attrs：当前指令的所有属性变成一个对象格式</div><div class="line">              &#125;</div><div class="line">              //scope:&#123;title:&apos;=title&apos;,tail:&apos;@tail&apos;,submit:&apos;&amp;fn&apos;&#125;  = :表示可以双向绑定，@：表示获取的是获取一个字符串类型的值</div><div class="line">              //scope:true//&#123;&#125;.两种都可以，是有区别的???</div><div class="line">          &#125;</div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>拖拽</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">link:function(scope,element,attrs)&#123;</div><div class="line">                element.on(&apos;mousedown&apos;,function(e)&#123;</div><div class="line">                    var disX = e.pageX - this.offsetLeft;</div><div class="line">                    var disY = e.pageY - this.offsetTop;</div><div class="line">                    angular.element(document).on(&apos;mousemove&apos;,function(e)&#123;</div><div class="line">                        element.css(&#123;left:e.pageX - disX + &apos;px&apos;,top: e.pageY - disY + &apos;px&apos;&#125;);</div><div class="line">                    &#125;);</div><div class="line">                    e.preventDefault();</div><div class="line">                    angular.element(document).on(&apos;mouseup&apos;,function(e)&#123;</div><div class="line">                        angular.element(document).off();</div><div class="line">                    &#125;);</div><div class="line">                &#125;);</div><div class="line">            &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/12/14/angular/">
+    <time datetime="2016-12-14T14:59:16.905Z" class="entry-date">
+        2016-12-14
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2016/12/14/git/" rel="prev"><span class="meta-nav">←</span> Git</a></span>
+    
+    
+        <span class="nav-next"><a href="/2016/12/14/blog/" rel="next">blog <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2016/12/14/git/">Git</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/14/angular/">angular</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/14/blog/">blog</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/14/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
