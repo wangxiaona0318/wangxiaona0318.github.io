@@ -60,6 +60,62 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-npm,bower依赖，fandoc文档生成，发布到npm上" class="post-npm,bower依赖，fandoc文档生成，发布到npm上 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/npm,bower依赖，fandoc文档生成，发布到npm上/" data-id="ciwp2m0ot0004sgv1632cpg8f" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="npm版本管理"><a href="#npm版本管理" class="headerlink" title="npm版本管理"></a>npm版本管理</h2><ul>
+<li>npm主要用来管理后台代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//发布依赖</div><div class="line">npm init</div><div class="line">npm install/uninstall jquery --save</div><div class="line">npm install/uninstall jquery@3.0.0 --save : 指定版本安装</div><div class="line">// 开发依赖</div><div class="line">npm install/uninstall jquery@3.0.0 --save-dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="bower版本管理"><a href="#bower版本管理" class="headerlink" title="bower版本管理"></a>bower版本管理</h2><ul>
+<li>bower主要用来管理前端代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install bower -g:安装</div><div class="line">    以下在需要的文件夹的目录下执行：</div><div class="line">bower init：初始化bower配置文件，记录依赖</div><div class="line">bower install angular --save</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>安装好后的路径：bower_components\angular<br>指定安装目录: 建立文件.bowerrc在里面指定目录,再执行bower install即可</p>
+</blockquote>
+<h2 id="发布到npm上"><a href="#发布到npm上" class="headerlink" title="发布到npm上"></a>发布到npm上</h2><ul>
+<li>发布的名字不能用已有的<br>把cmd的路径指定到要发布的文件夹，执行以下命令<br>npm init -y<br>nrm use npm<br>npm adduser<br>npm publish</li>
+</ul>
+<h2 id="安装，卸载，发布"><a href="#安装，卸载，发布" class="headerlink" title="安装，卸载，发布"></a>安装，卸载，发布</h2><ul>
+<li>1.全局安装 安装时增加-g参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install nodeppt -g</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>只要全局安装后就会</p>
+</blockquote>
+<h2 id="doc文档生成"><a href="#doc文档生成" class="headerlink" title="doc文档生成"></a>doc文档生成</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install fandoc -g</div><div class="line">fandoc init</div><div class="line">fandoc build</div><div class="line">fandoc server:启动</div></pre></td></tr></table></figure>
+<h2 id="npm-root-g-看npm安到哪里"><a href="#npm-root-g-看npm安到哪里" class="headerlink" title="npm root -g:看npm安到哪里"></a>npm root -g:看npm安到哪里</h2>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/12/14/npm,bower依赖，fandoc文档生成，发布到npm上/">
+    <time datetime="2016-12-14T15:07:09.387Z" class="entry-date">
+        2016-12-14
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-git" class="post-git post type-post status-publish format-standard hentry">
     <!---->
 
@@ -75,7 +131,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/git/" data-id="ciwp2eeds0001hcv1d9ip3cze" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/git/" data-id="ciwp2inmb0001sgv18772208v" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -90,8 +146,8 @@
 </ul>
 <blockquote>
 <p>相当于把master复制了一份，提交到dev上master才看不到，相当于dev把100块钱放到自己家了，那master就无法看到了</p>
-<h3 id="创建分支并且切换分支"><a href="#创建分支并且切换分支" class="headerlink" title="创建分支并且切换分支"></a>创建分支并且切换分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git branch dev</div><div class="line">git checkout dev</div><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
 </blockquote>
+<h3 id="创建分支并且切换分支"><a href="#创建分支并且切换分支" class="headerlink" title="创建分支并且切换分支"></a>创建分支并且切换分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git branch dev</div><div class="line">git checkout dev</div><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
 <h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//要切换到master身上来合并dev</div><div class="line">git merge dev</div></pre></td></tr></table></figure>
 <h2 id="发布静态页面"><a href="#发布静态页面" class="headerlink" title="发布静态页面"></a>发布静态页面</h2><ul>
 <li>发布页面要求分支的名字必须叫做gh-pages(把内容推送到这个分支上)</li>
@@ -139,7 +195,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/angular/" data-id="ciwp2eedk0000hcv1yvrcjpl4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/angular/" data-id="ciwp2inm20000sgv1jekqichq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -210,7 +266,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/blog/" data-id="ciwodoze60001vsv1bapyfy4k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/blog/" data-id="ciwp2inmg0002sgv1hz913fam" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -255,7 +311,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/hello-world/" data-id="ciwodozdx0000vsv1w3gaxoao" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/12/14/hello-world/" data-id="ciwp2inml0003sgv1z20ycjew" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -312,6 +368,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget-content">
       <ul>
+        
+          <li>
+            <a href="/2016/12/14/npm,bower依赖，fandoc文档生成，发布到npm上/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2016/12/14/git/">Git</a>
